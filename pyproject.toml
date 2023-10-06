@@ -3,15 +3,16 @@ requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "flatmaps"
-description = "Utilities for working with cortical flat maps"
+name = "nisc"
+description = "Miscellaneous tools for neuroimaging data"
 authors = [
-    {name = "Connor Lane", email = "connor.lane@childmind.org"},
+    {name = "Connor Lane", email = "connor.lane858@gmail.com"},
 ]
 readme = "README.md"
 requires-python = ">=3.7"
 license = {text = "MIT License"}
 dependencies = [
+    "nibabel",
     "numpy",
     "pycortex",
     "scikit-learn",
@@ -24,21 +25,20 @@ dynamic = ["version"]
 dev = ["pytest", "pre-commit", "ipython", "jupyter"]
 
 [project.urls]
-"Homepage" = "https://github.com/clane9/flatmaps"
+"Homepage" = "https://github.com/clane9/nisc"
 
 [tool.setuptools_scm]
-write_to = "flatmaps/_version.py"
+write_to = "nisc/_version.py"
 
 [tool.setuptools.packages.find]
-include = ["flatmaps*"]
-
+include = ["nisc*"]
 
 [tool.isort]
 profile = "black"
 
 [tool.pytest.ini_options]
 log_cli = true
-log_cli_level = "DEBUG"
+log_cli_level = "INFO"
 
 [tool.mypy]
 no_strict_optional = true

@@ -3,7 +3,7 @@ from typing import Optional, Tuple
 import numpy as np
 import pytest
 
-from flatmaps.resample import Bbox, Resampler
+from nisc.resample import Bbox, Resampler
 
 
 @pytest.fixture

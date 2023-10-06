@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from scipy.spatial import Delaunay
 
-from flatmaps.surface import Surface
+from nisc.surface import Surface
 
 
 @pytest.fixture
